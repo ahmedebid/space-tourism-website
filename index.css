@@ -56,3 +56,51 @@ select {
       scroll-behavior: auto !important;
     }
 }
+
+
+/* -------------------------------------------- */
+/* Utility Classes                              */
+/* -------------------------------------------- */
+
+.flex {
+  display: flex;
+  grid: var(--gap, 1rem); /* This is a custom property */
+}
+
+.grid {
+  display: grid;
+  grid: var(--gap, 1rem); /* This is a custom property */
+}
+
+.container {
+  /* A modern CSS property (logical property) to add padding based on 
+  the inline axis (add padding left and right) */
+  padding-inline: 2em; 
+
+  /* A modern CSS property (logical property) to add margin based on
+  the inline axis (add margin left and right). The value "auto" will 
+  center the element */
+  margin-inline: auto;
+
+  max-width: 80rem;
+}
+
+/* This class is for screen readers (sr) only and when applied to an
+element, it will be hidden from the UI (sighted users won't see it) but
+will still be accessible for screen readers so visually impaired users 
+can hear the content (this content can be, for example, a description of
+a button that has no text on it but is visually self explanatory for 
+sighted users and so the function of the button needs to be explained 
+for visually impaired users) */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
